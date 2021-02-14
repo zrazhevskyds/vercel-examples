@@ -1,4 +1,8 @@
 <?php
+$to      = 'zrazhevskyds@yandex.ru';
+$subject = 'the subject';
+$message = 'hello';
+$headers = 'From: info@123-pied.vercel.app' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
 
-header('content-type: application/json');
-echo json_encode(['time' => time(), 'date' => date('d.m.Y'), 'tech' => 'Vercel']);
+mail($to, $subject, $message, $headers);
